@@ -2,7 +2,7 @@
 
 **Praanscribe** is an open-source Python application designed to automate the segmentation and annotation of speech data using [Praat](http://www.praat.org/). It leverages OpenAI’s Whisper model for transcription and produces timestamped `.TextGrid` files compatible with Praat for linguistic analysis.
 
-🔗 **[GitHub Repository Link](#)**
+🔗 **https://alicagankaya.com/praanscribe/**
 
 ---
 
