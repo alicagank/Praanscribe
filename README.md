@@ -1,19 +1,83 @@
-# praanscribe
+# Praanscribe
 
-praanscribe is a small application for automatically transcribing audio and creating TextGrid files to be used in Praat.
+**Praanscribe** is an open-source Python application designed to automate the segmentation and annotation of speech data using [Praat](http://www.praat.org/). It leverages OpenAI’s Whisper model for transcription and produces timestamped `.TextGrid` files compatible with Praat for linguistic analysis.
 
-## Purpose
+🔗 **[GitHub Repository Link](#)**
 
-Praat utilizes the ‘TextGrid’ file format to integrate annotations into audio files. Manual transcription is frequently utilized during this process. The application’s goal is to automate this procedure by transcribing the utterances from audio files and generating TextGrid files that match the original audio’s length.
+---
 
-## Usage
+## 📌 Purpose & Theoretical Background
 
-```bash
-python praanscribe.py
-```
+**Automatic Speech Recognition (ASR) & Segmentation**
 
-- `<language_code>`: Language code indicating the language of the audio such as 'en', 'tr', 'fr', or more specific dialects like 'en-US', 'tr-TR', etc.
-- `<audio_file>`: Path to the audio file (.wav) you want to transcribe.
+ASR and segmentation technologies are foundational in modern phonetic and phonological research. ASR systems convert spoken input into textual or symbolic representations, making linguistic analysis more efficient (Jurafsky & Martin, 2023). Temporal segmentation—identifying boundaries at the sentence, word, or phoneme level—is key to aligning acoustic signals with linguistic units for qualitative and quantitative research.
 
+**Praat** (Boersma & Weenink, 2001) is a powerful tool for acoustic analysis and manual annotation. It supports multi-tiered `.TextGrid` annotations but requires time-consuming manual effort, especially for large datasets.
 
-The output is a simple TextGrid file where each word has the same length, stretching through the duration of the audio. This file, along with the audio can be further edited and analyzed using Praat.
+**Praanscribe** addresses this challenge by integrating Whisper-based ASR with Praat, generating sentence- and word-aligned `.TextGrid` files automatically—streamlining research workflows and enhancing reproducibility.
+
+---
+
+## ⚙️ Architecture
+
+- Written in **Python**
+- Runs **OpenAI’s Whisper** locally
+- Supports **5 model sizes**: `tiny`, `base`, `small`, `medium`, and `large`
+- Supports **99 languages**
+- Automatically generates:
+  - Sentence-level and word-level transcriptions
+  - `.TextGrid` files aligned with transcription timestamps
+  - Grapheme-to-phoneme (G2P) conversion for phonological tiers
+
+> **Note:** As Whisper is corpus-trained, accuracy may drop with pseudowords or rare lexemes. G2P methods work well for standard forms but may not capture dialectal variation.
+
+---
+
+## 🧠 Logic
+
+1. **Transcribe** audio using Whisper (ASR)
+2. **Extract** sentence and word timestamps
+3. **Convert** data to `.TextGrid` format
+4. **Align** tiers in Praat based on user preferences
+
+---
+
+## 🚀 Usage
+
+1. Run the `praanscribe` script in a Python environment.
+2. Provide your audio input (`.wav`, `.flac`, `.mp3`, `.aac`, etc.).
+3. Choose the Whisper model size (`tiny` to `large`) based on accuracy and compute power.
+4. Select tiers to include. Default tiers:
+   - `phones`
+   - `words-phono`
+   - `words`
+   - `phono`
+   - `ortho`
+5. The generated `.TextGrid` file will be saved in the **same directory** as the audio file.
+
+---
+
+## 🎬 Example Output
+
+![Alt text](https://alicagankaya.com/wp-content/uploads/2024/04/Screenshot-2025-04-22-at-21.15.07.png)
+
+---
+
+## 📂 Projects That Use Praanscribe
+
+> These research projects have used Praanscribe and opted to be publicly listed here. I’m honored to support their work.
+
+- Kaya, A. Ç. (2024). *Ölçünlü Türkçenin ünlü formant frekansları.* TÜBİTAK 2209-A.
+- Uzun, İ. P. (2025). *Türkçede Bileşik Sözcüklerin Sözlü Dilde Üretim Süreçlerine İlişkin Akustik Sesbilgisel Görünümler.* TÜBİTAK 1002-A Hızlı Destek Modülü. (Project No: 223K318)
+
+---
+
+## 📚 References
+
+- Boersma, P. & Weenink, D. (2025). *Praat: doing phonetics by computer* [Computer program]. Version 6.4.27. http://www.praat.org/
+- Goldman, J.-P. (2011). *Easyalign: an automatic phonetic alignment tool under praat.* Interspeech 2011, 3233–3236. https://doi.org/10.21437/Interspeech.2011-815
+- Jurafsky, D., & Martin, J. H. (2023). *Speech and Language Processing* (3rd ed.). Draft chapters online.
+
+---
+
+⭐️ Pull requests, issues, and contributions are welcome!
