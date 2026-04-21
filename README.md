@@ -1,6 +1,7 @@
 # Praanscribe
 
 Please let me know if you use Praanscribe for your research! I feel happy that it helps researchers and I often end up developing features that you suggest! :)
+
 Also, you may cite it as: "Kaya, A. Ç. (2025, May). Praanscribe: A semi-automatic, AI-powered segmentation tool for Praat [Poster presentation]. Student Conference on Linguistics 2025, Boğaziçi University, İstanbul, Türkiye."
 
 **Praanscribe** is an open-source Python CLI application designed to automate the segmentation of parts of speech and the annotation of sounds, as much as possible, using [Praat](http://www.praat.org/). It uses OpenAI’s Whisper model for transcription and produces `.TextGrid` files compatible with Praat for linguistic analysis.
