@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/792899983.svg)](https://doi.org/10.5281/zenodo.19896500)
+
 # Praanscribe
 
 Please let me know if you use Praanscribe for your research! I feel happy that it helps researchers and I often end up developing features that you suggest! :)
