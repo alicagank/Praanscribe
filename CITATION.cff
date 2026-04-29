@@ -1,5 +1,5 @@
 cff-version: "1.2.0"
-title: "Praanscribe: A semi-automatic, AI-powered segmentation tool for Praat [Poster]"
+title: "Praanscribe: A semi-automatic, AI-powered segmentation tool for Praat"
 message: If you use this software, please cite the poster presentation below.
 type: software
 authors:
@@ -7,18 +7,16 @@ authors:
     given-names: Ali Çağan
     orcid: "https://orcid.org/0009-0007-9386-9766"
 repository-code: "https://github.com/alicagank/praanscribe"
+doi: "10.5281/zenodo.19896501"
 date-released: 2025-05-01
 
 preferred-citation:
-  type: conference-paper
+  type: dataset
   authors:
     - family-names: Kaya
       given-names: Ali Çağan
       orcid: "https://orcid.org/0009-0007-9386-9766"
-  title: "Praanscribe: A semi-automatic, AI-powered segmentation tool for Praat [Poster]"
+  title: "Praanscribe: A semi-automatic, AI-powered segmentation tool for Praat"
   year: 2025
-  month: 5
-  conference:
-    name: "Student Conference on Linguistics 2025"
-    location: "Boğaziçi University, İstanbul, Türkiye"
-  notes: "Poster presentation"
+  doi: "10.5281/zenodo.19896501"
+  url: "https://doi.org/10.5281/zenodo.19896501"
