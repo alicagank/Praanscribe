@@ -1,22 +1,26 @@
 cff-version: "1.2.0"
 title: "Praanscribe: A semi-automatic, AI-powered segmentation tool for Praat"
-message: If you use this software, please cite the poster presentation below.
+message: If you use this software, please cite it as below.
 type: software
 authors:
   - family-names: Kaya
     given-names: Ali Çağan
     orcid: "https://orcid.org/0009-0007-9386-9766"
 repository-code: "https://github.com/alicagank/praanscribe"
+version: "1.0.0"
 doi: "10.5281/zenodo.19896501"
-date-released: 2025-05-01
+date-released: 2026-01-01
 
 preferred-citation:
-  type: dataset
+  type: software
   authors:
     - family-names: Kaya
       given-names: Ali Çağan
       orcid: "https://orcid.org/0009-0007-9386-9766"
   title: "Praanscribe: A semi-automatic, AI-powered segmentation tool for Praat"
-  year: 2025
+  version: "1.0.0"
+  year: 2026
   doi: "10.5281/zenodo.19896501"
   url: "https://doi.org/10.5281/zenodo.19896501"
+  publisher:
+    name: "Zenodo"
